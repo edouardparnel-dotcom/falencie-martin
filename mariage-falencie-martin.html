@@ -8,15 +8,15 @@
 <!-- Aperçu WhatsApp / réseaux (Open Graph) -->
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Falencie & Martin — Notre Mariage 💗" />
-<meta property="og:description" content="12 septembre 2026 · 11h00 · Orix Hôtel, Ouanaminthe (Haïti). Rejoignez-nous pour célébrer notre union." />
-<meta property="og:image" content="https://edouardparnel-dotcom.github.io/falencie-martin/preview-v2.jpg" />
+<meta property="og:description" content="12 septembre 2026 · 10h30 · Orix Hôtel, Ouanaminthe (Haïti). Rejoignez-nous pour célébrer notre union." />
+<meta property="og:image" content="https://edouardparnel-dotcom.github.io/falencie-martin/preview-v3.jpg" />
 <meta property="og:image:type" content="image/jpeg" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta property="og:image:alt" content="Faire-part de mariage Falencie & Martin — 12 septembre 2026" />
 <meta property="og:locale" content="fr_FR" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://edouardparnel-dotcom.github.io/falencie-martin/preview-v2.jpg" />
+<meta name="twitter:image" content="https://edouardparnel-dotcom.github.io/falencie-martin/preview-v3.jpg" />
 <meta name="theme-color" content="#F7DCE6" />
 
 <style>
@@ -78,6 +78,36 @@
   .venue p{font-size:14px; color:var(--ink-soft); margin:1px 0}
   .maplink{display:inline-block; margin-top:14px; font-size:12.5px; letter-spacing:.08em; text-transform:uppercase; color:var(--gold); text-decoration:none; border:1px solid var(--gold-soft); padding:8px 16px; border-radius:999px; transition:.2s}
   .maplink:hover{background:var(--gold); color:#fff}
+
+  /* Programme : une ligne du temps. Le filet doré relie les moments entre eux,
+     ce qu'une simple liste ne dit pas, et l'heure garde une largeur fixe pour
+     que les chiffres s'alignent au lieu de danser d'une ligne à l'autre. */
+  .prog{padding:4px 20px 30px}
+  .prog h3{font-family:Georgia,'Times New Roman',serif; font-weight:600; font-size:22px;
+    color:var(--olive); letter-spacing:.06em; text-align:center; margin-bottom:20px}
+  .prog-liste{position:relative; margin:0 auto; max-width:420px; padding-left:22px}
+  .prog-liste::before{content:''; position:absolute; left:5px; top:8px; bottom:8px; width:1px;
+    background:linear-gradient(180deg,transparent,var(--gold-soft) 12%,var(--gold-soft) 88%,transparent)}
+  .prog-item{position:relative; display:flex; align-items:baseline; gap:14px; padding:11px 0}
+  .prog-item::before{content:''; position:absolute; left:-22px; top:18px; width:11px; height:11px;
+    border-radius:50%; background:var(--cream2); border:1.5px solid var(--gold)}
+  .prog-item.fin::before{background:var(--gold)}
+  .prog-h{flex:0 0 66px; font-family:Georgia,'Times New Roman',serif; font-weight:600;
+    font-size:16px; color:var(--gold); font-variant-numeric:tabular-nums}
+  .prog-q{font-family:Georgia,'Times New Roman',serif; font-size:16.5px; color:var(--ink)}
+
+  /* Dress code : les deux teintes se montrent, elles ne se décrivent pas. */
+  .dress{margin:0 20px 30px; padding:26px 22px; background:#FBF6EC; border-radius:16px; text-align:center}
+  .dress h3{font-family:Georgia,'Times New Roman',serif; font-weight:600; font-size:22px;
+    color:var(--olive); letter-spacing:.06em; margin-bottom:6px}
+  .dress p{font-size:14.5px; color:var(--ink-soft); margin-bottom:18px}
+  .teintes{display:flex; justify-content:center; gap:26px}
+  .teinte{text-align:center}
+  .pastille{width:62px; height:62px; border-radius:50%; margin:0 auto 8px;
+    box-shadow:0 8px 18px -10px rgba(120,100,60,.6), inset 0 0 0 1px rgba(255,255,255,.7)}
+  .pastille.champagne{background:#F8DDC2}
+  .pastille.rose-poudre{background:#EEB8B8}
+  .teinte span{display:block; font-size:12.5px; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-soft)}
 
   .end{text-align:center; padding:14px 0 30px}
   .foot{text-align:center; font-family:Georgia,'Times New Roman',serif; font-style:italic; color:var(--ink-soft); font-size:16px; margin-top:8px}
@@ -177,7 +207,7 @@
         <h2 class="names">Falencie &amp; Martin</h2>
         <div class="heart" style="margin:6px 0 16px">♡</div>
         <p class="invite">ont le plaisir de vous inviter à leur</p>
-        <p class="civil">Mariage Civil</p>
+        <p class="civil">Cérémonie de mariage</p>
       </div>
 
       <div class="quote">
@@ -191,7 +221,7 @@
           <h3>Date</h3>
           <div class="datebox">
             <b>12 Septembre 2026</b>
-            <small>À 11h00</small>
+            <small>À 10h30</small>
           </div>
         </div>
         <div class="tile venue">
@@ -202,6 +232,29 @@
           <p>À côté du Collège Univers</p>
           <p>Ouanaminthe, Haïti</p>
           <a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Orix+Hotel+Ouanaminthe+Haiti" target="_blank" rel="noopener">Voir sur la carte</a>
+        </div>
+      </div>
+
+      <!-- Programme de la journée -->
+      <div class="prog reveal">
+        <h3>Programme</h3>
+        <div class="prog-liste">
+          <div class="prog-item"><span class="prog-h">10h30</span><span class="prog-q">Célébration</span></div>
+          <div class="prog-item"><span class="prog-h">12h15</span><span class="prog-q">Salutations et remise de cadeaux</span></div>
+          <div class="prog-item"><span class="prog-h">12h40</span><span class="prog-q">Séance de photos</span></div>
+          <div class="prog-item"><span class="prog-h">13h30</span><span class="prog-q">Service de table</span></div>
+          <div class="prog-item"><span class="prog-h">15h00</span><span class="prog-q">Musique et danse</span></div>
+          <div class="prog-item fin"><span class="prog-h">16h30</span><span class="prog-q">Fin de la cérémonie</span></div>
+        </div>
+      </div>
+
+      <!-- Dress code -->
+      <div class="dress reveal">
+        <h3>Dress code</h3>
+        <p>Nous serions heureux de vous voir dans ces teintes</p>
+        <div class="teintes">
+          <div class="teinte"><div class="pastille champagne"></div><span>Champagne</span></div>
+          <div class="teinte"><div class="pastille rose-poudre"></div><span>Rose poudré</span></div>
         </div>
       </div>
 
@@ -246,8 +299,8 @@
     const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')}),{threshold:.12});
     document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 
-    // Compte à rebours (12 septembre 2026, 11h00 — heure locale de l'événement)
-    const target=new Date('2026-09-12T11:00:00').getTime();
+    // Compte à rebours (12 septembre 2026, 10h30 — heure locale de l'événement)
+    const target=new Date('2026-09-12T10:30:00').getTime();
     const g=(id)=>document.getElementById(id), pad=(n)=>String(n).padStart(2,'0');
     function tick(){
       let d=target-Date.now();
@@ -262,10 +315,10 @@
     // Ajouter à l'agenda — fichier .ics universel (iPhone, Android, Google, Outlook)
     const ics=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//FalencieMartin//Mariage//FR','CALSCALE:GREGORIAN',
       'BEGIN:VEVENT','UID:falencie-martin-2026-09-12@wedding',
-      'DTSTAMP:20260101T000000Z','DTSTART:20260912T110000','DTEND:20260912T160000',
+      'DTSTAMP:20260101T000000Z','DTSTART:20260912T103000','DTEND:20260912T163000',
       'SUMMARY:💍 Mariage de Falencie & Martin',
       'LOCATION:Orix Hôtel\\, Rue Lamine #41\\, Ouanaminthe\\, Haïti',
-      'DESCRIPTION:Mariage Civil de Falencie & Martin. Au plaisir de partager ce moment avec vous 💗',
+      'DESCRIPTION:Cérémonie de mariage de Falencie & Martin. Au plaisir de partager ce moment avec vous 💗',
       'END:VEVENT','END:VCALENDAR'].join('\r\n');
     g('ics').addEventListener('click',function(e){
       e.preventDefault();
